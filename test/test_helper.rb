@@ -625,6 +625,14 @@ module Geocoder
         MockHttpResponse.new(options)
       end
     end
+
+    require 'geocoder/lookups/naver'
+    class Naver
+      private
+        def default_fixture_filename
+          "naver_green_factory"
+        end
+    end
   end
 end
 
